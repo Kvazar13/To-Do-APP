@@ -1,6 +1,11 @@
 <template>
   <form @submit.stop.prevent="submit">
-    <input v-model="input" type="text" />
+    <input
+      v-model="input"
+      class="focus:shadow-outline w-full appearance-none rounded-2xl border py-2 px-4 leading-tight text-gray-700 shadow focus:outline-none"
+      placeholder="What do you need to do?"
+      type="text"
+    />
   </form>
 </template>
 <script setup>
