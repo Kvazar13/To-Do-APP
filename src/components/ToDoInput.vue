@@ -15,6 +15,7 @@ const input = ref("");
 const emit = defineEmits(["todoCreated"]);
 
 function submit() {
+  if (!input.value) return true;
   emit("todoCreated", input.value);
   input.value = "";
 }
