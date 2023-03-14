@@ -2,17 +2,14 @@
   <div>
     <ToDoInput @todo-created="(value) => todos.push(value)" />
     <DoneToDosList :done-todos="doneTodos" />
-    <ul v-for="(todo, index) in todos" :key="index">
-      <li @click="taskDone(index)">
-        {{ todo }}
-      </li>
-    </ul>
+    <ToDosList :todos="todos" @task-done-ev="(index) => taskDone(index)" />
   </div>
 </template>
 <script setup>
 import { ref } from "vue";
 import ToDoInput from "@/components/ToDoInput.vue";
 import DoneToDosList from "@/components/DoneToDosList.vue";
+import ToDosList from "@/components/ToDosList.vue";
 
 const todos = ref([]);
 const doneTodos = ref([]);
