@@ -5,7 +5,10 @@
     <div
       class="h-fit min-h-[200px] w-[340px] rounded-2xl bg-white/70 p-5 backdrop-blur"
     >
-      <ToDoInput @todo-created="(value) => todos.push(value)" />
+      <div class="text-center mb-3 text-2xl text-gray-700">
+        Listify
+      </div>
+      <ToDoInput @todo-created="(value) => todos.push(value)"/>
       <div class="mt-3">
         <ToDosList
           :todos="todos"
