@@ -1,8 +1,20 @@
 <template>
-  <div>
-    <ToDoInput @todo-created="(value) => todos.push(value)" />
-    <DoneToDosList :done-todos="doneTodos" />
-    <ToDosList :todos="todos" @task-done-ev="(index) => taskDone(index)" />
+  <div
+    class="flex h-screen w-full justify-center bg-gradient-to-tr from-red-200 to-indigo-200 pt-40"
+  >
+    <div
+      class="h-[500px] h-fit w-[340px] rounded-2xl bg-white/70 p-5 backdrop-blur"
+    >
+      <ToDoInput @todo-created="(value) => todos.push(value)" />
+      <div class="mt-3">
+        <ToDosList
+          :todos="todos"
+          class="mb-3"
+          @task-done-ev="(index) => taskDone(index)"
+        />
+        <DoneToDosList :done-todos="doneTodos" class="px-3" />
+      </div>
+    </div>
   </div>
 </template>
 <script setup>
