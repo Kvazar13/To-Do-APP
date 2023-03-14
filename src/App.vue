@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <ToDo />
 </template>
 
-<script setup></script>
+<script setup>
+import ToDo from "@/components/ToDo.vue";
+</script>
