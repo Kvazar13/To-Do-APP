@@ -2,7 +2,6 @@
   <div>
     <ToDoInput @todo-created="(value) => todos.push(value)" />
     <DoneToDosList :done-todos="doneTodos" />
-    <hr />
     <ul v-for="(todo, index) in todos" :key="index">
       <li @click="taskDone(index)">
         {{ todo }}
