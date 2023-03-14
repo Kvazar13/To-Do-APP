@@ -1,6 +1,10 @@
 <template>
-  <ul v-for="(todo, index) in todos" :key="index">
-    <li @click="$emit('taskDoneEv', index)">
+  <ul>
+    <li
+      v-for="(todo, index) in todos"
+      :key="index"
+      @click="$emit('taskDoneEv', index)"
+    >
       {{ todo }}
     </li>
   </ul>
