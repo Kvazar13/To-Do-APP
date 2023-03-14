@@ -1,9 +1,9 @@
 <template>
   <div
-    class="flex h-screen w-full justify-center bg-gradient-to-tr from-red-200 to-indigo-200 pt-40"
+    class="flex min-h-screen w-full justify-center bg-gradient-to-tr from-red-200 to-indigo-200 py-40"
   >
     <div
-      class="h-[500px] h-fit w-[340px] rounded-2xl bg-white/70 p-5 backdrop-blur"
+      class="h-fit min-h-[200px] w-[340px] rounded-2xl bg-white/70 p-5 backdrop-blur"
     >
       <ToDoInput @todo-created="(value) => todos.push(value)" />
       <div class="mt-3">
