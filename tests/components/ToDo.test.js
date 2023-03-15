@@ -7,4 +7,10 @@ describe("ToDo", () => {
     const appName = screen.getByText("Listify");
     expect(appName).toBeInTheDocument();
   });
+
+  it("displays input", function () {
+    render(ToDo);
+    const input = screen.getByRole("textbox");
+    expect(input).toBeVisible();
+  });
 });
